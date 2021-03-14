@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "James",
+    "email": "jadlljames@gmail.com",
+    "password": "test",
+    "productsListed": []
+  }
+]
