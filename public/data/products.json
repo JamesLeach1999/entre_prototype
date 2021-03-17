@@ -1,0 +1,119 @@
+[
+  {
+    "id": 1,
+    "name": "PS5",
+    "buy": 599,
+    "ticket": 5,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1614963468/Gear-PS5-src-Sony_um5lqf.jpg",
+    "numTicks": 1198,
+    "winningNums": [98, 136, 275, 281, 475, 510, 558, 624, 864, 1010],
+    "cat": "electronics",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  },
+  {
+    "id": 2,
+    "name": "Audi A1",
+    "buy": 19000,
+    "ticket": 10,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1614963603/audi_px1zss.jpg",
+    "numTicks": 50000,
+    "winningNums": [
+      2740,
+      3255,
+      4587,
+      10441,
+      22259,
+      23631,
+      26338,
+      33635,
+      40189,
+      45702
+    ],
+
+    "cat": "autos",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  },
+  {
+    "id": 3,
+    "name": "North Face Puffer",
+    "buy": 299,
+    "ticket": 5,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1612636275/Burgundy%20brown%20The%20North%20Face%20puffer%20jacket%20with%20puffy%20hood%205500.jpg.jpg",
+    "numTicks": 598,
+    "winningNums": [40, 88, 201, 236, 277, 372, 444, 467, 501, 593],
+
+    "cat": "clothing",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  },
+  {
+    "id": 4,
+    "name": "Black Ops Cold War",
+    "buy": 599,
+    "ticket": 5,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1614963783/cod_pemycm.jpg",
+    "numTicks": 1198,
+    "winningNums": [134, 186, 193, 290, 523, 547, 710, 830, 936, 1147],
+
+    "cat": "electronics",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  },
+  {
+    "id": 5,
+    "name": "Refurbished IPhone X",
+    "buy": 249,
+    "ticket": 2,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1614964308/iphone-x-silver3-600x600_ryvpsi.jpg",
+    "numTicks": 500,
+    "winningNums": [7, 10, 12, 37, 82, 90, 105, 129, 351, 461],
+
+    "cat": "electronics",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  },
+  {
+    "id": 6,
+    "name": "Suzuki Motorbike",
+    "buy": 5995,
+    "ticket": 10,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1614964093/6492__plum-injusa_motorbike-racing-fighter_view-01_m1fgcd.jpg",
+    "numTicks": 15000,
+    "winningNums": [
+      1448,
+      1915,
+      2290,
+      3620,
+      7095,
+      7513,
+      9703,
+      12122,
+      12808,
+      12974
+    ],
+
+    "cat": "autos",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  },
+  {
+    "id": 7,
+    "name": "Bose 700 noise cancelling",
+    "buy": 299,
+    "ticket": 3,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1614963783/cod_pemycm.jpg",
+    "numTicks": 550,
+    "winningNums": [5, 12, 29, 48, 77, 135, 165, 188, 192, 502],
+
+    "cat": "electronics",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  },
+  {
+    "id": 8,
+    "name": "MacBook Air",
+    "buy": 2199,
+    "ticket": 15,
+    "image": "https://res.cloudinary.com/dhey8vvcx/image/upload/v1614964357/mac_e4ijd1.jpg",
+    "numTicks": 4500,
+    "winningNums": [119, 714, 727, 1268, 1885, 2312, 2555, 3155, 3292, 4039],
+
+    "cat": "electronics",
+    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi sit amet auctor fermentum. Sed aliquet elit vehicula sem tempor aliquam. Quisque fringilla, quam eu accumsan ultrices, elit ex vulputate nisi, mollis luctus turpis diam at orci. Integer tortor sem, tincidunt ac mauris a, mollis tempus purus."
+  }
+]

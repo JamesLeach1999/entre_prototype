@@ -8,7 +8,10 @@ import reducer from "../reducers/productReducers";
 import productContext from "../context/productContext";
 import useGlobalState from "../hooks/useGlobalState";
 
+const d = data
+
 const ProductPage = (props) => {
+  // console.log(props)
   var { id } = useParams();
   const [added, setAdded] = useState(false);
   const [brought, setBrought] = useState(0);
@@ -16,7 +19,9 @@ const ProductPage = (props) => {
   var [state, dispatch] = useReducer(cartreducer);
 
   useEffect(() => {
-    var filtProd = data.filter((product) => {
+
+    
+    var filtProd = d.filter((product) => {
       return product.id === parseInt(id);
     });
 

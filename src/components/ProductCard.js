@@ -1,26 +1,23 @@
 import React, { useContext } from "react";
 import { Button, Row, Col, Container, Card } from "react-bootstrap";
-import ProductContext from "../context/productContext";
 import { Link } from "react-router-dom";
 
-const ProductCard = () => {
-  const { product } = useContext(ProductContext);
-
+const ProductCard = (props) => {
+  const { products, data } = props;
+  // console.log(data);
   return (
     <Card style={{ width: "18rem" }}>
       <Link
         to={{
-          pathname: `/product/${product.id}`,
-          props: {
-            product: product,
-          },
+          pathname: `/product/${products.id}`,
+          state: { test: "test" },
         }}
       >
-        <Card.Img variant="top" src={product.image} />
+        <Card.Img variant="top" src={products.image} />
         <Card.Body>
-          <Card.Title>{product.name}</Card.Title>
+          <Card.Title>{products.name}</Card.Title>
           <Card.Text>
-            {product.desc.split(" ").slice(0, 12).join(" ")}
+            {products.desc.split(" ").slice(0, 12).join(" ")}
           </Card.Text>
         </Card.Body>
       </Link>
@@ -30,7 +27,7 @@ const ProductCard = () => {
             <Col>
               <Card.Text style={{ textAlign: "left" }}> Buy Now:</Card.Text>
             </Col>
-            <Col style={{ textAlign: "right" }}>£{product.buy}</Col>
+            <Col style={{ textAlign: "right" }}>£{products.buy}</Col>
           </Row>
           <br />
 
@@ -41,7 +38,7 @@ const ProductCard = () => {
                 Ticket price:
               </Card.Text>
             </Col>
-            <Col style={{ textAlign: "right" }}>£{product.ticket}</Col>
+            <Col style={{ textAlign: "right" }}>£{products.ticket}</Col>
           </Row>
         </Card.Footer>
       </Container>

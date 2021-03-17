@@ -10,7 +10,7 @@ const Cart = () => {
   var getCart = () => {
     const userCart = JSON.parse(localStorage.getItem("user"));
     var u = [];
-console.log(userCart)
+    console.log(userCart);
     if (userCart) {
       data.map((pro) => {
         userCart.cart.map((product) => {
@@ -37,9 +37,13 @@ console.log(userCart)
             <h4>{p.id}</h4>
             <h4>{p.buy}</h4>
             <img style={{ maxWidth: "100px" }} src={p.image} alt="" />
-            <button
-              onClick={() => dispatch({ type: "REMOVE_BUY", payload: p.id })}
-            >remove from cart</button>
+            <form>
+              <button
+                onClick={() => dispatch({ type: "REMOVE_BUY", payload: p.id })}
+              >
+                remove from cart
+              </button>
+            </form>
           </div>
         );
       })}

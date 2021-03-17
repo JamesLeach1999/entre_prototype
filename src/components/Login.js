@@ -1,16 +1,12 @@
 import React, { useState, useContext, useEffect, useReducer } from "react";
 import { Button, Row, Col, Container, CardDeck, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {UserContext} from "../context/UserContext";
-import data from "../data/user_data.json";
-import useGlobalState from "../hooks/useGlobalState"
+import { UserContext } from "../context/UserContext";
+
 const Login = () => {
-   const {login} = useContext(UserContext)
-var [log, setLog] = useState("")
-var [pass, setPass] = useState("")
-
-
-    // console.log(dispatch);
+  const { login } = useContext(UserContext);
+  var [log, setLog] = useState("");
+  var [pass, setPass] = useState("");
 
   return (
     <Form style={{ flex: "3" }}>
