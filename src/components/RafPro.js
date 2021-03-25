@@ -9,15 +9,24 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 const RafPro = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
-        <Row>
-            <p>{props.win ? <h1>winner</h1>: <h1>loser</h1>}</p>
-            Tickets :{props.ticks.map((tick) => {
-                return <Col>{tick.ticket}</Col>
-            })}
-        </Row>
-    )
+      <Row >
+        <br />
+        <Col>
+          Status:
+          {props.win ? <h4>winner</h4> : <h4>loser</h4>}
+        </Col>
+        <Col>
+          Tickets:
+          <br />
+          {props.ticks.map((tick, i) => {
+            return <>{i % 2 ===0? <>{tick.ticket}, </>: <>{tick.ticket},  <br/></>}</>;
+          })}
+        </Col>
+        <Col>Claim?</Col>
+      </Row>
+    );
 }
 
 export default RafPro

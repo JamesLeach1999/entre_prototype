@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { Products } from "./components/Products";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Login from "./components/Login";
+import LoginPage from "./components/Login";
+// import LoginPage from "./components/login/login"
+// import {Register} from "./components/login/register"
 import ProductPage from "./components/ProductPage";
 import Add from "./components/Add";
 import Register from "./components/Register";
@@ -79,7 +81,7 @@ function App() {
         <Switch>
           <Route exact path={"/"}>
             <Navbar />
-            <Header />
+            <Header i={data}/>
           </Route>
           <Route path={"/store/:cat"}>
             <Navbar />
@@ -108,10 +110,10 @@ function App() {
             <Add />
           </Route>
           <UserContext.Provider value={{ login, register }}>
-            <Route path={"/login"}>
+            {/* <Route path={"/login"}>
               <Navbar />
-              <Login />
-            </Route>
+              <LoginPage />
+            </Route> */}
             <Route path={"/register"}>
               <Navbar />
               <Register />

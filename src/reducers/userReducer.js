@@ -13,6 +13,17 @@ const userReducers = (state, action) => {
         auth: false,
       };
     } else {
+      localStorage.setItem(
+        "user",
+        JSON.stringify({
+          ...state,
+          // id: Math.floor(Math.random() * 100),
+          // email: action.payload.email,
+          name: action.payload.name,
+          // password: action.payload.password,
+          auth: true,
+        })
+      );
       return {
         ...state,
         email: action.payload.email,
@@ -44,11 +55,7 @@ const userReducers = (state, action) => {
     };
   }
 
-  if (action.type === "GET") {
-    return {
-      ...state,
-    };
-  }
+  
 };
 
 export default userReducers;

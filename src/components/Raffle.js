@@ -16,12 +16,13 @@ const Raffle = () => {
   var [win, setWin] = useState("");
   var [weiner, setWeiner] = useState(false);
   var [load, setLoad] = useState(false);
+  
   var getRaffle = () => {
     const userraffle = JSON.parse(localStorage.getItem("user"));
     var u = [];
     var t = [];
     var w = [];
-    if (userraffle) {
+    if (userraffle !== "") {
       data.map((pro) => {
         userraffle.entered.map((product) => {
           var i = [product];
@@ -59,7 +60,7 @@ const Raffle = () => {
     });
   };
 
-  function q() {}
+  
   useEffect(() => {
     getRaffle();
     // console.log(raffle);
@@ -90,10 +91,12 @@ const Raffle = () => {
   }, [load]);
 
   return (
-    <Container>
+    <Container
+      
+    >
       {raffle.map((products, i) => {
         return (
-          <>
+          <div>
             <h1>{product[i].name}</h1>
             <br />
             {weiner[i] ? (
@@ -101,7 +104,7 @@ const Raffle = () => {
             ) : (
               <RafPro win={false} name={product[i].name} ticks={products} />
             )}
-          </>
+          </div>
         );
       })}
     </Container>

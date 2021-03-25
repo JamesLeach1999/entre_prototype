@@ -1,45 +1,75 @@
 import React, { useState, useContext, useEffect, useReducer } from "react";
-import { Button, Row, Col, Container, CardDeck, Form } from "react-bootstrap";
+// import { Button, Row, Col, Container, CardDeck, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../context/UserContext"
 
-const Login = () => {
-  const { login } = useContext(UserContext);
+
+
+  const LoginPage = () => {
+
+    const { login } = useContext(UserContext);
   var [log, setLog] = useState("");
   var [pass, setPass] = useState("");
 
-  return (
-    <Form style={{ flex: "3" }}>
-      <Form.Group controlId="formGroupEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          onChange={(e) => setLog(e.target.value)}
-          placeholder="Enter email"
-        />
-      </Form.Group>
-      <Form.Group controlId="formGroupPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setPass(e.target.value)}
-          style={{ flex: "1" }}
-        />
-      </Form.Group>
-      <Button
-        variant="primary"
-        type="submit"
-        onMouseOver={() => login(log, pass)}
-      >
-        Submit
-      </Button>
+  
 
-      <Link to="/register">
+  
+
+ 
+    return (
+      <React.Fragment>
+        
+          <React.Fragment style={{width: "300px"}}>
+            <h3>Login!</h3>
+            <input
+              label="Username"
+              name="username"
+              type="text"
+              value={log}
+              onChange={(e) => setLog(e.target.value)}
+              placeholder="Enter username..."
+              // error={errors.username}
+              required
+              className="input"
+            />
+
+            <input
+              label="Password"
+              name="password"
+              type="password"
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+              placeholder="Enter password..."
+              // error={errors.password}
+              className="input"
+              required
+            />
+
+            <Button
+              type="submit"
+              label="Submit"
+              className="button"
+              handleClick={() => login(login, pass)}
+            />
+          </React.Fragment>
+        <Link to="/register">
         <h4>No Account? Register now</h4>
       </Link>
-    </Form>
-  );
-};
+      </React.Fragment>
+    );
+    }
 
-export default Login;
+
+
+const Button = (props) => (
+  <button
+    // type={props.type}
+    className={props.className}
+    onClick={props.handleClick}
+  >
+    {props.label}
+  </button>
+);
+
+
+export default LoginPage;

@@ -65,18 +65,39 @@ const Add = () => {
   }, [sub]);
 
   return (
-    <form enctype="multipart/form-data" onSubmit={() => setSub(true)}>
+    <form
+      enctype="multipart/form-data"
+      onSubmit={() => setSub(true)}
+      style={{ textAlign: "left", paddingLeft: "50px" }}
+    >
       {idk && console.log(idk)}
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <h1>Add Item</h1>
+      <h3>Item name</h3>
       <input
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
+      <br />
+      <br />
+      <br />
+      <h3>Item Buy Now Price</h3>
+
       <input
         type="number"
         value={buy}
         onChange={(e) => setBuy(e.target.value)}
       />
+      <br />
+      <br />
+      <h4>Ticket Price</h4>
+
       <input
         type="number"
         value={ticket}
@@ -91,6 +112,10 @@ const Add = () => {
           }
         }}
       />
+      <br />
+      <br />
+      <h4>Number of tickets</h4>
+
       <input
         type="number"
         value={numTickets}
@@ -102,12 +127,24 @@ const Add = () => {
           }
         }}
       />
+      <br />
+      <br />
+      <h4>Category</h4>
+
       <input type="text" value={cat} onChange={(e) => setCat(e.target.value)} />
+      <br />
+      <br />
+      <h4>Description</h4>
+
       <input
         type="text"
         value={desc}
         onChange={(e) => setDesc(e.target.value)}
       />
+      <br />
+      <br />
+      <h4>Upload Images</h4>
+
       <input
         type="file"
         // value={img}
@@ -115,13 +152,19 @@ const Add = () => {
         accept="image/*"
         onChange={(e) => imgUpload(e)}
       />
+      <br />
+      <br />
+
       {/* <Image cloudName="dheyvvcx" onChange={(e) => onPhotoSelected(e.target.value)} /> */}
+      <h4>Upload</h4>
+
       <button type="submit">submit</button>
       {errors
         ? errors.map((err) => {
             return <h1>{err}</h1>;
           })
         : ""}
+        <br/>
     </form>
   );
 };

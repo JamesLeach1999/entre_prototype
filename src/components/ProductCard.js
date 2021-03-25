@@ -6,7 +6,7 @@ const ProductCard = (props) => {
   const { products, data } = props;
   // console.log(data);
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card >
       <Link
         to={{
           pathname: `/product/${products.id}`,
