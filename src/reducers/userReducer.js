@@ -45,7 +45,7 @@ const userReducers = (state, action) => {
         auth: true,
       })
     );
-
+    console.log("thats numberwang");
     console.log(state);
     return {
       ...state,
@@ -54,8 +54,6 @@ const userReducers = (state, action) => {
       auth: true,
     };
   }
-
-  
 };
 
 export default userReducers;
