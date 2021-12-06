@@ -51,6 +51,7 @@ export const Products = (props) => {
   }, [loading]);
   return (
     <Container>
+      <h1>Store front</h1>
       <Row lg={4} sm={2} xs={1} style={{ marginTop: "20px" }}>
         {load.map((product) => {
           return (

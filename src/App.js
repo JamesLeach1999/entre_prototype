@@ -31,6 +31,8 @@ var defaultState = {
 function App() {
   var [state, dispatch] = useReducer(userReducer, defaultState);
   var [pros, setPros] = useState();
+  const [display, setDisplay] = useState("none");
+
   var login = (email, password) => {
     if (email && password) {
       var loginObj = {
@@ -49,12 +51,13 @@ function App() {
       email,
       password,
     };
+    setDisplay("block")
     dispatch({ type: "REGISTER_USER", payload: regObj });
+    return regObj;
   };
 
   var t = () => {
     var allItems = data;
-    console.log(allItems);
     var obj = [];
     if (localStorage.getItem("localProducts")) {
       var pushAll = JSON.parse(localStorage.getItem("localProducts"));
@@ -81,7 +84,7 @@ function App() {
         <Switch>
           <Route exact path={"/"}>
             <Navbar />
-            <Header i={data}/>
+            <Header i={data} />
           </Route>
           <Route path={"/store/:cat"}>
             <Navbar />
@@ -109,7 +112,7 @@ function App() {
             <Navbar />
             <Add />
           </Route>
-          <UserContext.Provider value={{ login, register }}>
+          <UserContext.Provider value={{ login, register, display }}>
             {/* <Route path={"/login"}>
               <Navbar />
               <LoginPage />

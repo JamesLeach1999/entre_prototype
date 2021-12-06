@@ -20,7 +20,6 @@ const cartReducer = (state, action) => {
     var randomWin = Math.floor(Math.random() * 10 + 1);
 
     while (i < totalBrought) {
-      console.log(i%6)
       if (i % 5 === 0) {
         u.push({
           ticket: winningNums[randomWin],
@@ -40,8 +39,7 @@ const cartReducer = (state, action) => {
     u = u.filter(function(item){
       return item.ticket !== null
     })
-    console.log(u)
-
+    
     userEntered.entered.push(u);
     localStorage.setItem("user", JSON.stringify(userEntered));
 

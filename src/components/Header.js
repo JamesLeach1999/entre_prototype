@@ -16,22 +16,19 @@ const Header = (props) => {
 
     // dispatch({ type: "GET_ALL", payload: data });
     setLoad(props.i);
-    console.log("all load");
     setloading(false);
 
-    console.log(load);
   };
 
   useEffect(() => {
     y();
-    console.log("use effect");
   }, [loading]);
   return (
     <div className="container">
       <h1>Raffle up prototype</h1>
 
       <div style={{ border: "1px solid black", textAlign: "left" }}>
-        <h3>Website explained:</h3>
+        <h3 data-testid="header1">Website explained:</h3>
         <h5>
           This is a basic website showing some of the functionality of how
           RaffleUp will work.

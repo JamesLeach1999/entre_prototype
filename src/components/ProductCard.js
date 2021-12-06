@@ -10,13 +10,13 @@ const ProductCard = (props) => {
       <Link
         to={{
           pathname: `/product/${products.id}`,
-          state: { test: "test" },
+          state: { test: props.products.id },
         }}
       >
         <Card.Img variant="top" src={products.image} />
         <Card.Body>
           <Card.Title>{products.name}</Card.Title>
-          <Card.Text>
+          <Card.Text data-testid="description">
             {products.desc.split(" ").slice(0, 12).join(" ")}
           </Card.Text>
         </Card.Body>

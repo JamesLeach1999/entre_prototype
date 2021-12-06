@@ -70,11 +70,9 @@ const Navbar = (props) => {
   };
 
   useEffect(() => {
-
     try {
-      
       const user = JSON.parse(localStorage.getItem("user"));
-  console.log(user)
+      // console.log(user);
       if (user.auth) {
         setLogin(true);
       }
@@ -82,7 +80,7 @@ const Navbar = (props) => {
         setLogin(true);
       };
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }, [login]);
 
@@ -93,20 +91,41 @@ const Navbar = (props) => {
       </Nav.Item> */}
       {/* Raffle: */}
 
-      <Nav.Item style={{ flex: "1" }}>
+      <Nav.Item style={{ flex: "1" }} data-testid="dropdown-item">
         <Nav.Link href="/">Home</Nav.Link>
       </Nav.Item>
-      <NavDropdown title="Dropdown" id="nav-dropdown" style={{ flex: "1" }}>
-        <NavDropdown.Item href="/store" eventKey="4.1">
+      <NavDropdown
+        title="Dropdown"
+        id="nav-dropdown"
+        style={{ flex: "1" }}
+        data-testid="dropdown-item"
+      >
+        <NavDropdown.Item
+          href="/store"
+          eventKey="4.1"
+          data-testid="dropdown-item"
+        >
           All
         </NavDropdown.Item>
-        <NavDropdown.Item href="/store/electronics" eventKey="4.1">
+        <NavDropdown.Item
+          href="/store/electronics"
+          eventKey="4.1"
+          data-testid="dropdown-item"
+        >
           Electronics
         </NavDropdown.Item>
-        <NavDropdown.Item href="/store/autos" eventKey="4.2">
+        <NavDropdown.Item
+          href="/store/autos"
+          eventKey="4.2"
+          data-testid="dropdown-item"
+        >
           Automobiles
         </NavDropdown.Item>
-        <NavDropdown.Item href="/store/clothing" eventKey="4.3">
+        <NavDropdown.Item
+          href="/store/clothing"
+          eventKey="4.3"
+          data-testid="dropdown-item"
+        >
           Clothing
         </NavDropdown.Item>
       </NavDropdown>
@@ -168,7 +187,7 @@ const Navbar = (props) => {
           >
             <Nav.Link href="/add">List product</Nav.Link>
           </Nav.Item>
-          
+
           <h4
             class="fas fa-adjust"
             style={{
