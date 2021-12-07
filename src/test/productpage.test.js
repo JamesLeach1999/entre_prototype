@@ -61,7 +61,7 @@ const setup = () => {
   };
 };
 
-describe("TESTING PRODUCT CARD", () => {
+describe("TESTING PRODUCT PAGE", () => {
   test("should render correct image", async () => {
     const id = 1;
     await act(async () => {
@@ -122,7 +122,7 @@ describe("TESTING PRODUCT CARD", () => {
     await act(async () => {
       const { getByTestId } = await renPage(id);
       const brought = getByTestId("buy-now");
-      fireEvent.click(brought)
+      fireEvent.click(brought);
       const confirmation = getByTestId("confirm");
 
       expect(confirmation).toHaveTextContent("Raffle entered");

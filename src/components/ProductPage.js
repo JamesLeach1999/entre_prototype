@@ -24,9 +24,10 @@ const ProductPage = (props) => {
   // k so we cant access use param in testing
   // looks like we got the state var working though
 
-  const goBack = () => [history.goBack()];
+  const goBack = () => {
+    history.goBack();
+  };
 
-  console.log();
   return (
     <Container style={{ border: "1px solid black", width: "120%" }}>
       <Row>
@@ -45,7 +46,7 @@ const ProductPage = (props) => {
           <Button
             onClick={(e) => {
               // dispatch({ type: "ADD_BUY", payload: id });
-              setDisplay(true)
+              setDisplay(true);
               setAdded(true);
               e.preventDefault();
             }}
@@ -84,7 +85,11 @@ const ProductPage = (props) => {
           {display && (
             <div>
               <h3 data-testid="confirm">Raffle entered</h3>
-              <button type="button" data-testid="backBtn" onClick={() => goBack()}>
+              <button
+                type="button"
+                data-testid="backBtn"
+                onClick={() => goBack()}
+              >
                 Back to store
               </button>
             </div>

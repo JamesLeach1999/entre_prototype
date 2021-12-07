@@ -187,7 +187,7 @@ const Navbar = (props) => {
           >
             <Nav.Link href="/add">List product</Nav.Link>
           </Nav.Item>
-
+        <h1>Thats numberwang</h1>
           <h4
             class="fas fa-adjust"
             style={{

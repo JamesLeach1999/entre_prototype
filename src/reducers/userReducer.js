@@ -1,5 +1,4 @@
 import data from "../data/user_data.json";
-
 const userReducers = (state, action) => {
   // var { type, payload } = action;
 
@@ -45,12 +44,19 @@ const userReducers = (state, action) => {
         auth: true,
       })
     );
-    console.log("thats numberwang");
-    console.log(state);
+
     return {
       ...state,
       email: action.payload.email,
       password: action.payload.password,
+      auth: true,
+    };
+  }
+
+  if (action.type === "REGISTER_TEST") {
+    return {
+      ...state,
+
       auth: true,
     };
   }

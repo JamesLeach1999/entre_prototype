@@ -17,6 +17,7 @@ import productReducer from "./reducers/productReducers";
 import useGlobalState from "./hooks/useGlobalState";
 import { UserContext } from "./context/UserContext";
 import ProductContext from "./context/productContext";
+import { TestContext } from "./context/TestContext";
 import data from "./data/product_data.json";
 var defaultState = {
   id: "",
@@ -31,6 +32,7 @@ var defaultState = {
 function App() {
   var [state, dispatch] = useReducer(userReducer, defaultState);
   var [pros, setPros] = useState();
+  const [test, setTest] = useState("numberwang");
   const [display, setDisplay] = useState("none");
 
   var login = (email, password) => {
@@ -51,10 +53,17 @@ function App() {
       email,
       password,
     };
-    setDisplay("block")
+    setDisplay("block");
     dispatch({ type: "REGISTER_USER", payload: regObj });
     return regObj;
   };
+
+  // righto chaps
+  // we have register test as context
+  // then the dispatch in this parent
+
+  // what do we need first?
+  // actually how about we just move it into register?
 
   var t = () => {
     var allItems = data;
@@ -117,10 +126,12 @@ function App() {
               <Navbar />
               <LoginPage />
             </Route> */}
-            <Route path={"/register"}>
-              <Navbar />
-              <Register />
-            </Route>
+            <TestContext.Provider value={{ test, setTest}}>
+              <Route path={"/register"}>
+                <Navbar />
+                <Register />
+              </Route>
+            </TestContext.Provider>
           </UserContext.Provider>
         </Switch>
       </Router>
