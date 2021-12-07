@@ -40,11 +40,6 @@ const setup = () => {
   };
 };
 
-
-
-// i could cry im so happy
-// it looks like all of them take bare time, but will eventually work
-
 describe("TESTING REGISTER", () => {
   var setTest;
   var name;

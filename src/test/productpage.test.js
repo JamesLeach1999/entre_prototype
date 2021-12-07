@@ -11,9 +11,6 @@ import {
   MemoryRouter,
   UserWithRouter,
 } from "react-router-dom";
-import { createMemoryHistory } from "history";
-
-import data from "../data/product_data.json";
 
 let container;
 
@@ -50,15 +47,6 @@ const renPage = async (id) => {
       </MemoryRouter>
     )
   );
-};
-
-const setup = () => {
-  const utils = render(<ProductPage />);
-  const brought = utils.getByTestId("brought");
-  return {
-    brought,
-    ...utils,
-  };
 };
 
 describe("TESTING PRODUCT PAGE", () => {

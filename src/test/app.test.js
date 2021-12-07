@@ -61,7 +61,6 @@ describe("TESTING APP ROUTES", () => {
     act(() => {
       userEvent.click(dropdown[0]);
     });
-    // userEvent.click(screen.getByText("Store front")).toBeInTheDocument()
     const elec = getAllByTestId("dropdown-item")[1];
     expect(elec).toHaveTextContent("Electronics");
     const elecButton = getByText("Electronics");
